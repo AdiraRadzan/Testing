@@ -1,0 +1,512 @@
+<html>
+	<!--- ini isi head --->
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/w3.css">
+		
+		<title>Portofolio Adira Radzan | Tugas Akhir</title>
+		
+		<style>
+		.w3-bar {
+			display: flex;
+			justify-content: center;
+		}
+		.w3-bar .full-width {
+			width: 800%;
+		}
+		.w3-bar2 {
+			display: inline-block;
+			overflow: hidden;
+		}
+	
+		</style>
+		
+	</head>
+	
+	<!--- ini isi body --->
+	<body>
+		
+		<div class="w3-container">
+			<center>
+			<img src="css/header.jpg" style="width:100%">
+		</div>
+			
+		<div class="w3-bar w3-brown w3-card-4">
+			<button class="w3-bar-item w3-button" onclick="Portofolio('About')">About</button>
+			<button class="w3-bar-item w3-button" onclick="Portofolio('Experience')">Experience</button>
+			
+			<div class="w3-dropdown-hover">
+				<button class="w3-button">Project</button>
+				<div class="w3-dropdown-content w3-bar-block w3-card-4">
+					<button class="w3-bar-item w3-button" onclick="Portofolio('Animation')">Animation</button>
+					<button class="w3-bar-item w3-button" onclick="Portofolio('Kalkulator')">Calculator</button>
+					<button class="w3-bar-item w3-button" onclick="Portofolio('Form')">Form</button>
+					<button class="w3-bar-item w3-button" onclick="Portofolio('Salary')">Salary</button>
+				</div>
+			</div>
+
+			<button class="w3-bar-item w3-button" onclick="Portofolio('Contact')">Contact</button>
+			
+		</div>
+	
+		<div id="About" class="w3-container Porto" style="display:none">
+			<div class="w3-panel w3-white">
+				<center>			
+				<h2>About</h2>
+				<img src="css/adira.png" style="width:20%">
+				<table>
+					<tr><td>Name<td>: <td> Adira Radzan Badriana
+					<tr><td>NIM<td>: <td> 10123047
+					<tr><td>Class<td>: <td> IF-2
+				</table>
+				<p>
+			</div>	
+			
+		</div>
+		
+		<div id="Experience" class="w3-container Porto" style="display:none">
+			<div class="w3-panel w3-white">
+				<center>
+				<h2>Experience</h2>
+				<p>Sorry, I don't have any experience yet. I still Learning
+			</div>
+			
+		</div>
+		
+		<!-- ini yang pake Dropdown Hover (Project) -->
+		<!-- Project Animation -->
+		<div id="Animation" class="w3-container Porto" style="display:none">
+			<div class="w3-panel w3-white">
+				<center>
+				<h2>Project Animation</h2>
+			
+				<div class="w3-bar2 w3-brown w3-round-xxlarge">
+					<button class="w3-bar-item w3-button" onclick="openKota('Top')">Top</button>
+					<button class="w3-bar-item w3-button" onclick="openKota('Bottom')">Bottom</button>
+					<button class="w3-bar-item w3-button" onclick="openKota('Left')">Left</button>
+					<button class="w3-bar-item w3-button" onclick="openKota('Right')">Right</button>
+					<button class="w3-bar-item w3-button" onclick="openKota('Opacity')">Opacity</button>
+					<button class="w3-bar-item w3-button" onclick="openKota('Zoom')">Zoom</button>
+					<button class="w3-bar-item w3-button" onclick="openKota('Fading')">Fading</button>
+					<button class="w3-bar-item w3-button" onclick="openKota('Spin')">Spin</button>
+				</div>
+				
+				<!-- ini yang pake Dropdown Hover (Animation) -->
+				<div id="Top" class="w3-container kota " style="display:none">
+					<h2>Animation TOP</h2>
+					<img src="css/kampus.jpg" class="w3-animate-top" style="width:30%">
+					<p>
+				</div>
+				
+				<div id="Bottom" class="w3-container kota" style="display:none">
+					<h2>Animation BOTTOM</h2>
+					<img src="css/kampus.jpg" class="w3-animate-bottom" style="width:30%">
+					<p>
+				</div>
+				
+				<div id="Left" class="w3-container kota" style="display:none">
+					<h2>Animation LEFT</h2>
+					<img src="css/kampus.jpg" class="w3-animate-left" style="width:30%">
+					<p>
+				</div>
+				
+				<div id="Right" class="w3-container kota" style="display:none">
+					<h2>Animation RIGHT</h2>
+					<img src="css/kampus.jpg" class="w3-animate-right" style="width:30%">
+					<p>
+				</div>
+				
+				<div id="Zoom" class="w3-container kota" style="display:none">
+					<h2>Animation ZOOM</h2>
+					<img src="css/kampus.jpg" class="w3-animate-zoom" style="width:30%">
+					<p>
+				</div>
+				
+				<div id="Opacity" class="w3-container kota" style="display:none">
+					<h2>Animation OPACITY</h2>
+					<img src="css/kampus.jpg" class="w3-animate-opacity" style="width:30%">
+					<p>
+				</div>
+				
+				<div id="Fading" class="w3-container kota" style="display:none">
+					<h2>Animation FADING</h2>
+					<img src="css/kampus.jpg" class="w3-animate-fading" style="width:30%">
+					<p>
+				</div>
+				
+				<div id="Spin" class="w3-container kota" style="display:none">
+					<h2>Animation SPIN</h2>
+					<img src="css/kampus.jpg" class="w3-spin" style="width:30%">
+					<p>
+				</div>
+				
+				<p>
+				
+				<script>
+				function openKota(namaKota) {
+					var i;
+					var x = document.getElementsByClassName("kota");
+					for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none"; 
+					}
+					document.getElementById(namaKota).style.display = "block"; 
+				}
+				</script>
+				
+			</div>	
+		</div>
+		
+		<!-- Project Kalkulator -->
+		<div id="Kalkulator" class="w3-container Porto" style="display:none">
+			<div class="w3-panel w3-white">
+				<center>
+				<h2>Project Calculator</h2>
+				
+				<form name=formkalkulator>
+				<script>
+					function penjumlahan()
+					{
+						var a=parseFloat(document.formkalkulator.a.value);
+						var b=parseFloat(document.formkalkulator.b.value);
+						var c=a*1 + b*1;
+						document.formkalkulator.c.value=c;
+					}
+					
+					function pengurangan()
+					{
+						var a=document.formkalkulator.a.value;
+						var b=document.formkalkulator.b.value;
+						var c=a-b;
+						document.formkalkulator.c.value=c;
+					}
+					
+					function perkalian()
+					{
+						var a=document.formkalkulator.a.value;
+						var b=document.formkalkulator.b.value;
+						var c=a*b;
+						document.formkalkulator.c.value=c;
+					}
+					
+					function pembagian()
+					{
+						var a=document.formkalkulator.a.value;
+						var b=document.formkalkulator.b.value;
+						var c=a/b;
+						document.formkalkulator.c.value=c;
+					}
+					
+					function hapuss()
+					{
+						document.formkalkulator.a.value="";
+						document.formkalkulator.b.value="";
+						document.formkalkulator.c.value="";
+					}
+				</script>	
+				
+				<div class="w3-bar2 w3-brown w3-round-xxlarge">
+					<center>
+					<p>
+					<h2>PROGRAM CALCULATOR</h2>		
+			
+					<p>
+					<div class="w3-panel w3-brown">
+						<table>
+							<tr><td>Enter the First Number  <td>:  <input name=a>
+							<tr><td>Enter the Second Number  <td>:  <input name=b>
+							<tr><td>Results  <td>:  <input name=c>
+						</table>
+					</div>	
+					
+					<p>
+						<input type="button" class="w3-button w3-bar2 w3-round-xxlarge w3-gray" value="+" onclick="penjumlahan()">
+						<input type="button" class="w3-button w3-bar2 w3-round-xxlarge w3-gray" value="-" onclick="pengurangan()">
+						<input type="button" class="w3-button w3-bar2 w3-round-xxlarge w3-gray" value="x" onclick="perkalian()">
+						<input type="button" class="w3-button w3-bar2 w3-round-xxlarge w3-gray" value=":" onclick="pembagian()">
+						<input type="button" class="w3-button w3-bar2 w3-round-xxlarge w3-gray" value="CLEAR" onclick="hapuss()">
+					</p>
+					
+				</div>
+					
+			</div>
+		</div>
+		
+		<!-- Project Form -->
+		<div id="Form" class="w3-container Porto" style="display:none">
+			<div class="w3-panel w3-white">
+				<h2><center>Project Form</h2>
+				
+				<script>
+					function kirim()
+					{
+						alert("You Have Submitted Your Form")
+					}
+					
+					function batal()
+					{
+						alert("Please fill in your form again")
+					}
+					
+				</script>
+			
+				<div class="w3-container">
+					 <h2>CLASS IT-2 STUDENT DATA FORM</h2>
+
+					<div class="w3-card-4 w3-white">
+						<div class="w3-container w3-brown">
+							<h2>STUDENT DATA</h2>
+						</div>
+						
+						<div class="w3-panel">
+							<form class="w3-container">
+							<p>
+								<label>NIM</label></p>
+								<input class="w3-input" type="text" name="nim">
+							<p>
+								<label>FULL NAME</label></p>
+								<input class="w3-input" type="text" name="namalengkap">
+							</form>
+						</div>	
+						
+						<div class="w3-container w3-white">
+							<div class="w3-container w3-brown">
+								<h2>Your hobby</h2>
+							</div>
+							<form class="w3-container" action="action_page.php">
+							<p>
+								<input class="w3-check" type="checkbox" checked="checked" name="Games">
+								<label>Games</label></p>
+							<p>
+								<input class="w3-check" type="checkbox" name="Musik">
+								<label>Music</label></p>
+							<p>
+								<input class="w3-check" type="checkbox" name="Renang">
+								<label>Swimming</label></p>
+							<p>
+								<input class="w3-check" type="checkbox" disabled>
+								<label>Eat (Disabled)</label></p>
+							</form>
+						</div>	
+						
+						<div class="w3-container w3-white">
+							<div class="w3-container w3-brown">
+								<h2>Your Gender</h2>
+							</div>
+							
+							<form class="w3-container" action="action_page.php">
+							<p>
+								<input class="w3-radio" type="radio" name="gender" value="male" checked>
+								<label>Male</label></p>
+							<p>
+								<input class="w3-radio" type="radio" name="gender" value="female">
+								<label>Female</label></p>
+							<p>
+								<input class="w3-radio" type="radio" name="gender" value="" disabled>
+								<label>Don't know (Disabled)</label></p>
+							</form>	
+						</div>	
+					
+						<div class="w3-container w3-white">
+							<div class="w3-container w3-brown">
+								<h2>Favorite Place</h2>
+							</div>
+							
+							<select class="w3-select" name="option">
+								<option value="" disabled selected>Favorite Place</option>
+								<option value="1">Cafe</option>
+								<option value="2">Park</option>
+								<option value="3">Mountain</option>
+								<option value="4">sea</option>
+							</select>
+							
+						</div>
+						<hr>
+						
+						<div class="w3-container w3-white">
+							<!--- Ini Kalo Pake Tambahan Function (ALERT) --->
+							<input type="button" class="w3-btn w3-round-xxlarge w3-grey" value="Send" onclick="kirim()">
+							<input type="button" class="w3-btn w3-round-xxlarge w3-grey" value="Cancel" onclick="batal()">
+					
+						</div>	
+						<hr>
+						
+					</div>
+				</div>	
+			</div>
+		</div>
+		
+		<!-- Project Salary -->
+		<div id="Salary" class="w3-container Porto " style="display:none">
+			<div class="w3-panel w3-white">
+				<h2><center>Project Employee Salary</h2>
+				<center>
+				<script>
+					function proses() {
+						var bagian = document.forms.myForm.bagian.value;
+						var gajipokok;
+
+						if (bagian == "HRD") gajipokok = 8000000;
+						if (bagian == "MARKETING") gajipokok = 6000000;
+						if (bagian == "PRODUCTION") gajipokok = 5000000;
+						if (bagian == "OB") gajipokok = 3000000;
+
+						document.forms.myForm.gajipokok.value = gajipokok;
+
+						var pendidikan = document.forms.myForm.pendidikan.value;
+						var tjpendidikan = pendidikan * 1000000;
+						document.forms.myForm.tjpendidikan.value = tjpendidikan;
+
+						var tjlain = 0;
+
+						if (document.forms.myForm.anak.checked) tjlain += 0.1 * gajipokok;
+						if (document.forms.myForm.istri.checked) tjlain += 0.15 * gajipokok;
+						if (document.forms.myForm.makan.checked) tjlain += 0.2 * gajipokok;
+						document.forms.myForm.tjlain.value = tjlain;
+
+						var totalgaji = gajipokok + tjpendidikan + tjlain;
+						document.forms.myForm.totalgaji.value = totalgaji;
+					}
+
+					function hapus() {
+						document.forms.myForm.totalgaji.value ="";
+						document.forms.myForm.gajipokok.value ="";
+						document.forms.myForm.tjpendidikan.value ="";
+						document.forms.myForm.tjlain.value ="";
+				
+					}
+				</script>
+					
+				<div class="w3-bar2 w3-brown w3-round-xxlarge">
+					<p><h1>Employee Salary</h1>
+				
+					<div class="w3-panel w3-brown ">
+				
+					<table>
+						<form name="myForm">
+							<tr>
+								<td>EMPLOYEE NAME</td>
+								<td><input class="w3-input" type="text" name="namapegawai"></td>
+							</tr>
+							<tr>
+								<td>PART</td>
+								<td>
+									<select class="w3-select" name="bagian">
+										<option>HRD</option>
+										<option>MARKETING</option>
+										<option>PRODUCTION</option>
+										<option>OB</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>STUDY</td>
+								<td>
+									<input class="w3-radio" type="radio" name="pendidikan" value="1">S1
+									<input class="w3-radio" type="radio" name="pendidikan" value="2">S2
+									<input class="w3-radio" type="radio" name="pendidikan" value="3">S3
+								</td>
+							</tr>
+							<tr>
+								<td>OTHER ALLOWANCES</td>
+								<td>
+									<input class="w3-check" type="checkbox" name="anak">CHILD
+									<input class="w3-check" type="checkbox" name="istri">WIFE
+									<input class="w3-check" type="checkbox" name="makan">EAT
+								</td>
+							</tr>
+							<tr>
+								<td colspan=2><hr></td>
+							</tr>
+							<tr>
+								<td>BASIC SALARY</td>
+								<td><input class="w3-input" type="text" name="gajipokok"></td>
+							</tr>
+							<tr>
+								<td>EDUCATION ALLOWANCES</td>
+								<td><input class="w3-input" type="text" name="tjpendidikan"></td>
+							</tr>
+							<tr>
+								<td>OTHER ALLOWANCES</td>
+								<td><input class="w3-input" type="text" name="tjlain"></td>
+							</tr>
+							<tr>
+								<td>TOTAL SALARY</td>
+								<td><input class="w3-input" type="text" name="totalgaji"></td>
+							</tr>
+						   
+						</form>
+					</table>	
+					
+					</div>
+					
+					<div class="w3-container w3-brown">
+						<center>
+						<p>
+						<input type="button" class="w3-button w3-gray" value="Proses" onclick="proses()">
+						<input type="button" class="w3-button w3-gray" value="Clear" onclick="hapus()">
+					</div>	
+					
+				</div>
+			</div>
+		</div>
+			
+		<div id="Contact" class="w3-container Porto " style="display:none">
+			<div class="w3-panel w3-white">
+				<center>
+				<h2>Contact</h2>
+		
+				
+				<div class="w3-bar2 w3-brown w3-round-xxlarge">
+					<button class="w3-bar-item w3-button" onclick="oKota('WhatsApp')">WhatsApp</button>
+					<button class="w3-bar-item w3-button" onclick="oKota('Instagram')">Instagram</button>
+					<button class="w3-bar-item w3-button" onclick="oKota('Gmail')">Gmail</button>
+				</div>
+				
+				<div id="WhatsApp" class="w3-container ota " style="display:none">
+					<h2>WhatsApp</h2>
+					<h4>0812 2190 9802</h4>
+					<p>
+				</div>
+				
+				<div id="Instagram" class="w3-container ota" style="display:none">
+					<h2>Instagram</h2>
+					<h4>@adira_radzan</h4>
+					<p>
+				</div>
+				
+				<div id="Gmail" class="w3-container ota" style="display:none">
+					<h2>Gmail</h2>
+					<h4>adira.radzan.badriana@gmail.com</h4>
+					<p>
+				</div>
+				
+				<p>
+			
+				<script>
+					function oKota(namaKota) {
+						var i;
+						var x = document.getElementsByClassName("ota");
+						for (i = 0; i < x.length; i++) {
+							x[i].style.display = "none"; 
+						}
+						document.getElementById(namaKota).style.display = "block"; 
+					}
+				</script>
+				
+			</div>
+			
+		</div>
+	
+		<script>
+			function Portofolio(CVWeb) {
+				var i;
+				var x = document.getElementsByClassName("Porto");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none"; 
+				}
+				document.getElementById(CVWeb).style.display = "block"; 
+			}
+		</script>
+		
+	</body>
+</html>
